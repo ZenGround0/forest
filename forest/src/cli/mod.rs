@@ -181,6 +181,7 @@ impl CliOpts {
             // override the chain configuration
             cfg.chain = Arc::new(ChainConfig::calibnet());
         }
+        println!("attempting to read chain cfg");
         println!("chain cfg version: {}", cfg.chain.network_version(0));
 
         if let Some(genesis_file) = &self.genesis {
